@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booleans and if statement</title>
+  <link rel="stylesheet" href="../styles.css"> <!-- Link to CSS -->
+</head>
+<body>
+  <button onclick="
+    console.log(`Cart Quantity: ${cartQuantity}`);
+    ">Show Quantity</button>
+
+  <button onclick="
+  cartQuantity ++;
+  
+  cartQuantity > cartMaxQuantity ? console.log('The cart is full') : console.log(`Cart Quantity: ${cartQuantity}`);
+  ">Add to Cart</button>
+
+  <button onclick="
+  cartQuantity += 2
+  cartQuantity > cartMaxQuantity ? console.log('The cart is full') : console.log(`Cart Quantity: ${cartQuantity}`);
+  ">+2</button>
+
+  <button onclick="
+  cartQuantity += 3
+  cartQuantity > cartMaxQuantity ? console.log('The cart is full') : console.log(`Cart Quantity: ${cartQuantity}`);
+  ">+3</button>
+
+  <button onclick="
+  cartQuantity = 0;
+  console.log('Cart was reset.')
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  ">reset Cart</button>
+
+  <button onclick="
+  cartQuantity--;
+  cartQuantity < 0 ? console.log('Not enough items') : 
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  ">Remove from Cart</button>
+
+<button onclick="
+cartQuantity -= 2;
+cartQuantity < 0 ? console.log('Not enough items') : 
+console.log(`Cart Quantity: ${cartQuantity}`);
+">-2</button>
+
+<button onclick="
+cartQuantity -= 3;
+cartQuantity < 0 ? console.log('Not enough items') : 
+console.log(`Cart Quantity: ${cartQuantity}`);
+">-3</button>
+
+  <script src="../index.js"></script> <!-- Link to JS -->
+</body>
+</html>

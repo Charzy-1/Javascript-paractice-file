@@ -41,9 +41,23 @@
     }
 
 
-  comparePrice(product1, product2)
+  console.log((product1, product2))
   
   // function2
+  function isSameProuduct(product1, product2) {
+    if (product1.name === product2.name && product1.price === product2.price) {
+      return true; 
+    } else {
+      return false;
+    }
+  }
+
+  console.log(isSameProuduct(product1, product2));
+
+  // converting to lowercase in javascript
+  const myName = 'CHARLES';
+
+  console.log(myName.toLowerCase())
 
   </script>
 </body>

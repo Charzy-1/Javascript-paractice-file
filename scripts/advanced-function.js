@@ -16,8 +16,10 @@ runTwice(add);
 
 // 12c Create a button when clicking the button, after 3 seconds, the text insede the button cnanges to 'Finished'. 
 
+// Select the button element 
 const jsButton = document.querySelector('.finish-button');
 
+// Define the function to update button text
 const buttonElement = () => {
   setTimeout(() => {
     jsButton.innerHTML = 'Finished!';

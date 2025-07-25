@@ -88,5 +88,23 @@ const countPositive = nums => {
 
 console.log(countPositive([1, -2, 5]))
 
+
+/*
+const newArray = [1, 2, 3]
+
+const updatedArray = newArray.map((value, index) => {
+ return value + 2;
+})
+
+console.log(updatedArray) 
+*/
+
 // 12m Create a function that takes an array of number and returns an array where each number is increased
 
+const addNum = (newArray) => {
+  const updatedArray = newArray.map((value, index) => value + 2);
+
+  console.log(updatedArray) 
+};
+
+addNum([1, -2, 3])

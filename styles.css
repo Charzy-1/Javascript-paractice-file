@@ -55,6 +55,6 @@ body {
  }
 
  button{
-  padding: var(--space-2) var(--space-1);
+  padding: 0.3rem var(--space-1);
   margin-left: var(--space-2);
  }

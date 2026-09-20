@@ -1,16 +1,21 @@
 // This is a comment
 let cart_quantity = 0;
 
+/*
+GETTING WHAT IS STORED ON LOCAL STORAGE AND SAVING IT AS THE NEW SCORE
+CONVERT TO JAVASCRIPT OBJECT FIRST BY USING JSON.PARSE METHOD
+*/
+let score = JSON.parse(localStorage.getItem('score'));
 
-// Creating an object to add a score by updating the result.
-const score = {
-  wins: 0,
-  losses: 0,
-  ties: 0
+if (score === null) {
+  score = {
+    wins: 0,
+    losses: 0,
+    ties: 0
+  }
 }
 
 // Function PLAYER MOVE
-
 function playGame(myMove) {
   let computerMove = pickComputerMove();
 
@@ -52,6 +57,9 @@ function playGame(myMove) {
     score.ties += 1;
   } 
 
+  // STORING THE SCORE ON LOCAL STORAGE
+  localStorage.setItem('score', JSON.stringify(score));
+
   alert(`You picked ${myMove}, Computer picked ${computerMove}. ${result}.
 Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}.`);
 }
@@ -78,7 +86,11 @@ function resetScore() {
   score.wins = 0
   score.losses = 0
   score.ties = 0
-
+  /*
+  REMOVE THE STORED VALUE ON THE LOCAL STORAGE SO THIS RESET CAN WORL
+  */
+  localStorage.removeItem('score');
+  
   alert(`Scores have been reset
 Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}.`)
 }

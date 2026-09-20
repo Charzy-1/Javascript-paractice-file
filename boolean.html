@@ -12,49 +12,15 @@
 
     <p>Rock Paper Scissors</p>
 
-    <button onclick="
-      pickComputerMove();
-
-      if (computerMove === 'Rock') {
-        result = 'it is a tie';
-      } else if (computerMove === 'Paper') {
-        result = 'You lose';
-      } else if (computerMove === 'Scissors') {
-        result = 'You won';
-      }
-
-      alert(`You picked Rock, Computer picked ${computerMove}. ${result}.`);
-      ">Rock
+    <button onclick="playGame('Rock')">
+      Rock
     </button>
 
-    <button onclick="
-      pickComputerMove();
-
-      if (computerMove === 'Rock') {
-        result = 'You won.';
-      } else if (computerMove === 'Paper') {
-        result = 'It is a tie';
-      } else if (computerMove === 'Scissors') {
-        result = 'You lose';
-      }
-
-      alert(`You picked Paper, Computer picked ${computerMove}. ${result}.`);
-      ">
+    <button onclick="playGame('Paper')">
       Paper
     </button>
 
-    <button onclick="
-      pickComputerMove();
-
-      if (computerMove === 'Rock') {
-        result = 'You lose.';
-      } else if (computerMove === 'Paper') {
-        result = 'You won.';
-      } else if (computerMove === 'Scissors') {
-        result = 'it is a tie.';
-      }
-
-      alert(`You picked Scissors, Computer picked ${computerMove}. ${result}.`);">
+    <button onclick="playGame('Scissors')">
       Scissors
     </button>
     

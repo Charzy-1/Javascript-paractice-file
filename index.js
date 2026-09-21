@@ -7,6 +7,10 @@ CONVERT TO JAVASCRIPT OBJECT FIRST BY USING JSON.PARSE METHOD
 */
 let score = JSON.parse(localStorage.getItem('score'));
 
+/* 
+if we remove value stored on localStorage as we did in the reset button function at the bottom, the score will be null so we need to add a defult value to score so the reset button can be active in seeing what to use.
+*/
+
 if (score === null) {
   score = {
     wins: 0,

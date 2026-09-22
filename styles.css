@@ -59,3 +59,12 @@ body {
   margin-left: var(--space-2);
   cursor: pointer;
  }
+
+ /* DOM STYLING BEGINS */
+ .dom-container{
+  padding: 20px 5%;
+ }
+
+ .js-subscribe-button{
+  margin: var(--space-1) 0 var(--space-4);
+ }

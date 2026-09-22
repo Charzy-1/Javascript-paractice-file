@@ -100,8 +100,24 @@ Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}.`)
 }
 
 // DOM PROJECT BEGINS HERE
+// FUNTION TO CHANGE THE SUBSCRIBE TO SUBSCRIBED WHEN CLICKED
 function subscribeButton() {
   const buttonElement = document.querySelector('.js-subscribe-button');
 
   buttonElement.innerHTML = 'Subscribed';
+}
+
+// FUNCTION THAT CALCULATES WHEN THE CALCULATE BOTTON IS CLICKED
+function calculate() {
+  let inputElement = Number(document.querySelector('.js-cost-input').value);
+
+  console.log(inputElement);
+
+  if (inputElement < 40) {
+    inputElement += 10;
+  }else if (inputElement >= 40) {
+    inputElement;
+  }
+
+  let output = document.querySelector('.output-value').textContent = `$${inputElement}`;
 }

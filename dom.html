@@ -8,13 +8,25 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="dom-container">
 
     <p>Youtube Subscribe button</p>
 
     <button class="js-subscribe-button" onclick="
       subscribeButton()
     ">Subscribe</button>
+
+    <h2>Amazon Shipping Calculator</h2>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders above $40 = FREE shipping.</p>
+    
+    <input type="text" placeholder="Cost of order" class="js-cost-input"">
+
+    <button onclick="
+      calculate()
+    ">Calculate</button>
+
+    <p class="output-value"></p>
     
   </div>
 

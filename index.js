@@ -111,13 +111,11 @@ function subscribeButton() {
 function calculate() {
   let inputElement = Number(document.querySelector('.js-cost-input').value);
 
-  console.log(inputElement);
-
   if (inputElement < 40) {
     inputElement += 10;
   }else if (inputElement >= 40) {
     inputElement;
   }
 
-  let output = document.querySelector('.output-value').textContent = `$${inputElement}`;
+  document.querySelector('.output-value').textContent = `$${inputElement}`;
 }

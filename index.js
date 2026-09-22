@@ -98,3 +98,10 @@ function resetScore() {
   alert(`Scores have been reset
 Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}.`)
 }
+
+// DOM PROJECT BEGINS HERE
+function subscribeButton() {
+  const buttonElement = document.querySelector('.js-subscribe-button');
+
+  buttonElement.innerHTML = 'Subscribed';
+}

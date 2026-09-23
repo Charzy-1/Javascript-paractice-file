@@ -19,6 +19,9 @@ if (score === null) {
   }
 }
 
+document.querySelector('.js-score').innerHTML = 
+  `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}.;`
+
 // Function PLAYER MOVE
 function playGame(myMove) {
   let computerMove = pickComputerMove();
@@ -64,8 +67,18 @@ function playGame(myMove) {
   // STORING THE SCORE ON LOCAL STORAGE
   localStorage.setItem('score', JSON.stringify(score));
 
-  alert(`You picked ${myMove}, Computer picked ${computerMove}. ${result}.
-Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}.`);
+  document.querySelector('.js-score').innerHTML = 
+  `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}.;`
+
+  // LINE OF CODE TO PRESENT THE RESULT ON THE PAGE
+  document.querySelector('.js-result').innerHTML = 
+    `${result}`;
+
+  // lINE OF CODE TO PRESENT THE MOVE ON THE PAGE
+  document.querySelector('.js-moves').innerHTML = 
+    `You ${myMove} - ${computerMove} Computer`;
+
+  alert(`You picked ${myMove}, Computer picked ${computerMove}. ${result}.`);
 }
 
 // FUNCTION FOR THE COMPUTERMOVE
@@ -97,6 +110,10 @@ function resetScore() {
   
   alert(`Scores have been reset
 Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}.`)
+
+document.querySelector('.js-score').innerHTML = 
+  `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}.;`
+
 }
 
 // DOM PROJECT BEGINS HERE

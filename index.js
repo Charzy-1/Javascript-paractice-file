@@ -77,8 +77,6 @@ function playGame(myMove) {
   // lINE OF CODE TO PRESENT THE MOVE ON THE PAGE
   document.querySelector('.js-moves').innerHTML = 
     `You ${myMove} - ${computerMove} Computer`;
-
-  alert(`You picked ${myMove}, Computer picked ${computerMove}. ${result}.`);
 }
 
 // FUNCTION FOR THE COMPUTERMOVE
@@ -107,9 +105,6 @@ function resetScore() {
   REMOVE THE STORED VALUE ON THE LOCAL STORAGE SO THIS RESET CAN WORL
   */
   localStorage.removeItem('score');
-  
-  alert(`Scores have been reset
-Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}.`)
 
 document.querySelector('.js-score').innerHTML = 
   `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}.;`

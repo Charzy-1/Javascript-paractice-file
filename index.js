@@ -102,9 +102,13 @@ Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}.`)
 // DOM PROJECT BEGINS HERE
 // FUNTION TO CHANGE THE SUBSCRIBE TO SUBSCRIBED WHEN CLICKED
 function subscribeButton() {
-  const buttonElement = document.querySelector('.js-subscribe-button');
+  let buttonElement = document.querySelector('.js-subscribe-button');
 
-  buttonElement.innerHTML = 'Subscribed';
+  if (buttonElement.innerHTML === 'Subscribe') {
+    buttonElement.innerHTML = 'Subscribed';
+  } else {
+    buttonElement.innerHTML = 'Subscribe';
+  }
 }
 
 // FUNCTION THAT CALCULATES WHEN THE CALCULATE BOTTON IS CLICKED

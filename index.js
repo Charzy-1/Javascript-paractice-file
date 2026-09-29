@@ -125,13 +125,21 @@ function subscribeButton() {
 
 // FUNCTION THAT CALCULATES WHEN THE CALCULATE BOTTON IS CLICKED
 function calculate() {
-  let inputElement = Number(document.querySelector('.js-cost-input').value);
+  const inputElement = document.querySelector('.js-cost-input');
+  let inputValue = Number(inputElement.value);
 
-  if (inputElement < 40) {
-    inputElement += 10;
-  }else if (inputElement >= 40) {
-    inputElement;
+  if (Number.isNaN(inputValue)) {
+    document.querySelector('.output-value').textContent = 'Please enter a valid number';
+    return;
   }
 
-  document.querySelector('.output-value').textContent = `$${inputElement}`;
+  if (inputValue < 40) {
+    inputValue += 10;
+  }else if (inputValue >= 40) {
+    inputValue;
+  }
+
+  document.querySelector('.output-value').textContent = `$${inputValue}`;
+
+  inputElement.value = '';
 }
